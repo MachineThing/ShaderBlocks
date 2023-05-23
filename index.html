@@ -6,13 +6,17 @@
     <title>Shaderblock</title>
   </head>
   <body>
-    <div id="blockly"></div>
     <div id="player">
       <canvas id="glview"></canvas>
       <div id="noWebGL">
         <span>WebGL is unsupported for this browser.</span>
       </div>
     </div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="blocklyArea">
+      <div id="blocklyDiv">
+
+      </div>
+    </div>
+    <script type="module" defer src="/src/main.ts"></script>
   </body>
 </html>

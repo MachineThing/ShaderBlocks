@@ -1,0 +1,17 @@
+#player {
+    background-color: green;
+    height: 100vh;
+    width: fit-content;
+    #glview {
+        width: @webGLSize * 1vw;
+    }
+
+    @media only screen and (max-width: 600px) {
+        height: initial;
+        width: 100vw;
+        #glview {
+            height: auto;
+            width: initial;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import './style/index.less'
+import inject from './editor'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  hello, world!
-`
+const blocklyArea = document.getElementById('blocklyArea')!
+const playerDiv = document.getElementById('player')!
+inject(blocklyArea, playerDiv)
