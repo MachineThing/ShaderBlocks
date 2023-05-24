@@ -9,7 +9,7 @@ inject(blocklyArea, playerDiv)
 function setupWebGL(_?: Event) {
     const canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("glview")!
 
-    initScene(canvas)
+    initScene(canvas, playerDiv)
 }
 
 window.addEventListener("load", setupWebGL)

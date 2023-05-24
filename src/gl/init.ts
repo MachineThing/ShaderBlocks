@@ -7,7 +7,7 @@ interface bufObjInter {
     len?: number
 }
 
-function initScene(canvas: HTMLCanvasElement) {
+function initScene(canvas: HTMLCanvasElement, player: HTMLElement) {
     const gl = canvas.getContext("webgl")
     if (gl === null) {
         alert("WebGL is not supported on your browser.")
@@ -61,7 +61,8 @@ function initScene(canvas: HTMLCanvasElement) {
     gl.clearColor(0.0, 0.0, 0.0, 1.0)
 
     const resize = (_?: Event) => {
-        // TODO: Resize the canvas on resize
+        canvas.width = player.clientWidth
+        canvas.height = Math.floor(player.clientWidth / 1.5)
     }
 
     window.addEventListener('resize', resize)
