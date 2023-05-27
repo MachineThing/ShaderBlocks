@@ -1,7 +1,7 @@
 import Blockly from 'blockly'
 import toolbox from './toolbox.json'
 import recolorBlocks from './recolor'
-import { glslGenerator } from './generator'
+import glslGenerator from './generator'
 
 let workspace: Blockly.WorkspaceSvg
 
@@ -40,6 +40,7 @@ function inject(blocklyArea: HTMLElement, playerDiv: HTMLElement) {
 // @ts-expect-error
 window.runCode = () => {
     const code = glslGenerator.workspaceToCode(workspace)
+    console.log(code)
     alert(code)
 }
 
